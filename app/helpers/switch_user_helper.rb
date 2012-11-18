@@ -22,7 +22,7 @@ module SwitchUserHelper
       options = options.html_safe
     end
     select_tag "switch_user_identifier", options,
-      :onchange => "location.href = '/switch_user?scope_identifier=' + encodeURIComponent(this.options[this.selectedIndex].value)"
+      :onchange => "location.href = '/admin/switch_user?scope_identifier=' + encodeURIComponent(this.options[this.selectedIndex].value)"
   end
 
   private
