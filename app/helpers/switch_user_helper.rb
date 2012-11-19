@@ -38,7 +38,7 @@ module SwitchUserHelper
   end
 
   def available?
-    user = provider.current_users_without_scope.first
+    user = provider.current_user(:admin_user)
     SwitchUser.view_guard(user, request)
   end
 
